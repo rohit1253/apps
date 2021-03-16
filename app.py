@@ -60,6 +60,10 @@ def language_page():
 def sentiment_page():
     return render_template('sentiment.html')
 
+@app.route('/rubik')
+def rubiks_page():
+    return render_template('rubik.html')
+
 
 @app.route('/iris/predict',methods=['POST'])
 def predict_iris():
