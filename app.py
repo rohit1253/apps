@@ -1,6 +1,6 @@
 import numpy as np
 from flask import Flask, render_template, request, redirect, url_for, flash
-from flask_sqlalchemy import SQLAlchemy
+#from flask_sqlalchemy import SQLAlchemy
 import pickle
 from nltk import wordpunct_tokenize
 from nltk.corpus import stopwords
@@ -41,6 +41,7 @@ languages = {'aa': 'Afar', 'ab': 'Abkhazian', 'ae': 'Avestan', 'af': 'Afrikaans'
 app = Flask(__name__)
 model = pickle.load(open('iris_model.pkl', 'rb'))
 
+"""
 #SqlAlchemy Database Configuration With Mysql
 app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql://root:''@localhost/crud'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
@@ -61,6 +62,7 @@ class Data(db.Model):
         self.capital = capital
         self.currency = currency
         self.stamp = stamp
+"""
 
 @app.route('/')
 def home():
