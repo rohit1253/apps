@@ -128,7 +128,7 @@ def predict_sentiment():
     else:
         text_sentiment = "Neutral"
     return render_template('sentiment.html', sent_prediction_score_text='The sentiment score is : {}'.format(text_sentiment_score), sent_prediction_text='The sentiment is : {}'.format(text_sentiment))
-
+"""
 #this route is for inserting data to mysql database via html forms
 @app.route('/stamp_collection/insert', methods = ['POST'])
 def insert():
@@ -179,6 +179,6 @@ def delete(id):
     flash("Data Deleted Successfully")
  
     return redirect(url_for('stamps_page'))
-
+"""
 if __name__ == "__main__":
     app.run(debug=True)
