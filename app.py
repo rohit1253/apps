@@ -90,8 +90,7 @@ def rubiks_page():
 
 @app.route('/stamp_collection')
 def stamps_page():
-    all_data = Data.query.all()
-    return render_template('stamp.html', stamps = all_data)
+    return render_template('stamp.html')
 
 
 @app.route('/iris/predict',methods=['POST'])
