@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../static/favicon.ico">
+
+    <title>Sentiment Analyzer</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="../static/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../static/css/font-awesome.min.css" rel="stylesheet">
+    <link href="../static/css/footer.css" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <link href="../static/css/sticky-footer-navbar.css" rel="stylesheet">
+    <!--<style>
+    html {
+        background-image: url('../static/img/iris_background.jpeg');
+         }
+    </style>-->
+  </head>
+
+  <body>
+
+    <header>
+      <!-- Fixed navbar -->
+      <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+        <a class="navbar-brand" href="{{ url_for('home')}}"><img src="../static/img/Logo.png" alt="Logo" width="30" height="30"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="{{ url_for('home')}}">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{{ url_for('aboutus_page')}}">About Me</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{{ url_for('iris_page')}}">Iris Predictor</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{{ url_for('language_page')}}">Language Detector</a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="{{ url_for('sentiment_page')}}">Sentiment Analyzer <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{{ url_for('rubiks_page')}}">Rubik's collection</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{{ url_for('stamps_page')}}">Stamp's collection</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{{ url_for('loan_page')}}">Loan Calculator</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+
+    <!-- Begin page content -->
+    <main role="main" class="container h-100">
+
+    <h1 class="text-center pt-3">Predicts the Sentiment of the entered text</h1>
+     <h3 class="text-center pt-3"> Enter the text in the text area to predict the sentiment</h3>
+
+
+    <form action="{{ url_for('predict_sentiment')}}"method="post">
+            <div class="form-group">
+                <label for="exampleFormControlTextarea1"><i>Enter the Text</i></label>
+                <textarea class="form-control" name="textforsentimentanalysis" id="exampleFormControlTextarea1" rows="3"></textarea>
+            </div>
+
+                <div class="row justify-content-center">
+            <button type = "submit" class = "btn btn-primary">Predict</button>
+            </div>
+         </form>
+      <br>
+   <br>
+   <div class="text-center">
+   <h3>{{ sent_prediction_score_text }}</h3>
+   <h2>{{ sent_prediction_text }}</h2>
+      </div>
+
+    </main>
+    <div class="fixed-bottom">
+    <footer class="footer">
+      <div class="container">
+        <div class="text-center">
+         <a href="https://www.facebook.com/rohit.tamboli"><img src="../static/img/fb.jpg" alt="Faceboof"></a>
+         <a href="https://www.instagram.com/rohit1253"><img src="../static/img/insta.jpg" alt="Instagram"></a>
+         <a href="https://www.twitter.com/RohitATamboli"><img src="../static/img/twitter.jpg" alt="Twitter"></a>
+         <a href="https://github.com/rohit1253"><img src="../static/img/github.jpg" alt="GitHub"></a>
+         <a href="https://stackoverflow.com/users/5115109/ratamboli"><img src="../static/img/stack.jpg" alt="StackOverFlow"></a>
+         <a href="https://www.linkedin.com/in/rohit-tamboli-94a97337"><img src="../static/img/linkedin.jpg" alt="LinkedIN"></a>
+        <!--<span class="text-muted">Place sticky footer content here.</span>-->
+      </div>
+      </div>
+    </footer>
+    </div>
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script>window.jQuery || document.write('<script src="../static/js/jquery-slim.min.js"><\/script>')</script>
+    <script src="../static/js/popper.min.js"></script>
+    <script src="../static/js/bootstrap.min.js"></script>
+    <script src="../static/js/Chart.min.js"></script>
+
+    </script>
+  </body>
+</html>

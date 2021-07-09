@@ -1,0 +1,225 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../static/favicon.ico">
+
+    <title>Rubik's Collection</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="../static/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../static/css/font-awesome.min.css" rel="stylesheet">
+    <link href="../static/css/footer.css" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <link href="../static/css/sticky-footer-navbar.css" rel="stylesheet">
+    <!--<style>
+    html {
+        background-image: url('../static/img/iris_background.jpeg');
+         }
+    </style>-->
+  </head>
+
+  <body>
+
+    <header>
+      <!-- Fixed navbar -->
+      <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+        <a class="navbar-brand" href="{{ url_for('home')}}"><img src="../static/img/Logo.png" alt="Logo" width="30" height="30"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="{{ url_for('home')}}">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{{ url_for('aboutus_page')}}">About Me</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{{ url_for('iris_page')}}">Iris Predictor</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{{ url_for('language_page')}}">Language Detector</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{{ url_for('sentiment_page')}}">Sentiment Analyzer</a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="{{ url_for('rubiks_page')}}">Rubik's collection <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{{ url_for('stamps_page')}}">Stamp's collection</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{{ url_for('loan_page')}}">Loan Calculator</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+
+    <!-- Begin page content -->
+    <main role="main" class="container h-100">
+
+    <h1 class="text-center pt-3">My Rubik's Cube collection</h1>
+     <h3 class="text-center pt-3">Check out my collection of Rubik's Cube</h3>
+     <br>
+     <br>
+    <div class="row h-100 justify-content-center align-items-center">
+    <div class="table-responsive">
+        <table style="width:100%" class="table-bordered table">
+          <tr>
+            <th><h4>Sr. No.</h4></th>
+            <th><h4>Image</h4></th>
+            <th><h4>Name</h4></th>
+            <th><h4>Quantity</h4></th>
+          </tr>
+          <tr>
+            <td><h5>1</h5></td>
+            <td class="text-center"><img src="../static/img/rubik_2x2.jpg" alt="Pocket Cube 2x2x2"></td>
+            <td><h5><a href="https://en.wikipedia.org/wiki/Pocket_Cube">2x2x2 Pocket Cube</a></h5></td>
+            <td><h5>1</h5></td>
+          </tr>
+          <tr>
+            <td><h5>2</h5></td>
+            <td class="text-center"><img src="../static/img/rubik_3x3.jpg" alt="Rubik's Cube 3x3x3"></td>
+            <td><h5><a href="https://en.wikipedia.org/wiki/Rubik%27s_Cube">3x3x3 Rubik's Cube</a></h5></td>
+            <td><h5>3</h5></td>
+          </tr>
+          <tr>
+            <td><h5>3</h5></td>
+            <td class="text-center"><img src="../static/img/rubik_4x4.jpg" alt="Rubik's Cube 4x4x4"></td>
+            <td><h5><a href="https://en.wikipedia.org/wiki/Rubik%27s_Revenge">4x4x4 Rubik's Revenge</a></h5></td>
+            <td><h5>1</h5></td>
+          </tr>
+          <tr>
+            <td><h5>4</h5></td>
+            <td class="text-center"><img src="../static/img/rubik_5x5.jpg" alt="Rubik's Cube 5x5x5"></td>
+            <td><h5><a href="https://en.wikipedia.org/wiki/Professor%27s_Cube">5x5x5 Professor's Cube</a></h5></td>
+            <td><h5>1</h5></td>
+          </tr>
+          <tr>
+            <td><h5>5</h5></td>
+            <td class="text-center"><img src="../static/img/skewb.jpg" alt="Skewb"></td>
+            <td><h5><a href="https://en.wikipedia.org/wiki/Skewb">Skewb</a></h5></td>
+            <td><h5>1</h5></td>
+          </tr>
+          <tr>
+            <td><h5>6</h5></td>
+            <td class="text-center"><img src="../static/img/mirror.jpg" alt="Mirror Cube"></td>
+            <td><h5><a href="https://en.wikipedia.org/wiki/Mirror_blocks">Mirror Cube</a></h5></td>
+            <td><h5>1</h5></td>
+          </tr>
+          <tr>
+            <td><h5>7</h5></td>
+            <td class="text-center"><img src="../static/img/sphere.jpg" alt="Sphere Cube"></td>
+            <td><h5><a href="https://en.wikipedia.org/wiki/Rubik%27s_360">Rubik's Sphere</a></h5></td>
+            <td><h5>1</h5></td>
+          </tr>
+          <tr>
+            <td><h5>8</h5></td>
+            <td class="text-center"><img src="../static/img/pyraminx_3x3.jpg" alt="Pyraminx 3x3"></td>
+            <td><h5><a href="https://en.wikipedia.org/wiki/Pyraminx">3x3x3 Pyraminx</a></h5></td>
+            <td><h5>1</h5></td>
+          </tr>
+          <tr>
+            <td><h5>9</h5></td>
+            <td class="text-center"><img src="../static/img/megaminx.jpg" alt="Megaminx"></td>
+            <td><h5><a href="https://en.wikipedia.org/wiki/Megaminx">Megaminx</a></h5></td>
+            <td><h5>1</h5></td>
+          </tr>
+          <tr>
+            <td><h5>10</h5></td>
+            <td class="text-center"><img src="../static/img/mastermorphix.jpg" alt="Mastermorphix"></td>
+            <td><h5><a href="https://rubiks.fandom.com/wiki/Mastermorphix">Mastermorphix</a></h5></td>
+            <td><h5>2</h5></td>
+          </tr>
+          <tr>
+            <td><h5>11</h5></td>
+            <td class="text-center"><img src="../static/img/rubik_twist.jpg" alt="3x3x3 Twist Cube"></td>
+            <td><h5><a href="https://www.amazon.com/CuberSpeed-Twist-stickerelss-Speed-Cube/dp/B079J1TKTR">3x3x3 Twist Cube</a></h5></td>
+            <td><h5>1</h5></td>
+          </tr>
+          <tr>
+            <td><h5>11</h5></td>
+            <td class="text-center"><img src="../static/img/rubik_3color.jpg" alt="Z-cube"></td>
+            <td><h5><a href="https://www.maskecubos.com/en/cubes/1207-z-cube-3x3-penrose-cube.html">3x3x3 Z-Cube</a></h5></td>
+            <td><h5>1</h5></td>
+          </tr>
+          <tr>
+            <td><h5>12</h5></td>
+            <td class="text-center"><img src="../static/img/axis.jpg" alt="Axis Cube"></td>
+            <td><h5><a href="https://rubiks.fandom.com/wiki/Axis_Cube">Axis Cube</a></h5></td>
+            <td><h5>1</h5></td>
+          </tr>
+          <tr>
+            <td><h5>13</h5></td>
+            <td class="text-center"><img src="../static/img/void.jpg" alt="Void Cube"></td>
+            <td><h5><a href="https://en.wikipedia.org/wiki/Void_Cube">Void Cube</a></h5></td>
+            <td><h5>1</h5></td>
+          </tr>
+        </table>
+    </div>
+
+    <h1 class="text-center pt-3">Total 17!!!</h1>
+
+    <!--
+    <form action="{{ url_for('predict_iris')}}"method="post">
+            <div class = "form-group row pt-3">
+               <label for = "sepallength1"><i>Sepal Length</i></label>
+               <input type = "text" class = "form-control" id = "sepallength" name="sepallength" placeholder = "Enter Sepal Length (cms)">
+            </div>
+            <div class = "form-group row">
+               <label for = "sepalwidth1"><i>Sepal Width</i></label>
+               <input type = "text" class = "form-control" id = "sepalwidth" name="sepalwidth" placeholder = "Enter Sepal Width (cms)">
+            </div>
+            <div class = "form-group row">
+               <label for = "petallength1"><i>Petal Length</i></label>
+               <input type = "text" class = "form-control" id = "petallength" name="petallength"placeholder = "Enter Petal Length (cms)">
+            </div>
+            <div class = "form-group row">
+               <label for = "petalwidth1"><i>Petal Width</i></label>
+               <input type = "text" class = "form-control" id = "petalwidth" name="petalwidth"placeholder = "Enter Petal Width (cms)">
+            </div>
+
+                <div class="row justify-content-center">
+            <button type = "submit" class = "btn btn-primary" style="width: 100%;">Predict</button>
+            </div>
+         </form> -->
+         </div>
+         <!--
+   <br>
+   <br>
+   <div class="text-center">
+   <h2>{{ prediction_text }}</h2>
+      </div> -->
+    </main>
+    <div class="fixed-bottom">
+    <footer class="footer">
+      <div class="container">
+        <div class="text-center">
+         <a href="https://www.facebook.com/rohit.tamboli"><img src="../static/img/fb.jpg" alt="Faceboof"></a>
+         <a href="https://www.instagram.com/rohit1253"><img src="../static/img/insta.jpg" alt="Instagram"></a>
+         <a href="https://www.twitter.com/RohitATamboli"><img src="../static/img/twitter.jpg" alt="Twitter"></a>
+         <a href="https://github.com/rohit1253"><img src="../static/img/github.jpg" alt="GitHub"></a>
+         <a href="https://stackoverflow.com/users/5115109/ratamboli"><img src="../static/img/stack.jpg" alt="StackOverFlow"></a>
+         <a href="https://www.linkedin.com/in/rohit-tamboli-94a97337"><img src="../static/img/linkedin.jpg" alt="LinkedIN"></a>
+        <!--<span class="text-muted">Place sticky footer content here.</span>-->
+      </div>
+      </div>
+    </footer>
+    </div>
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script>window.jQuery || document.write('<script src="../static/js/jquery-slim.min.js"><\/script>')</script>
+    <script src="../static/js/popper.min.js"></script>
+    <script src="../static/js/bootstrap.min.js"></script>
+  </body>
+</html>
