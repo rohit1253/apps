@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../static/img/icons/iris.ico">
+
+    <title>Iris Predictor</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="../static/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../static/css/font-awesome.min.css" rel="stylesheet">
+    <link href="../static/css/footer.css" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <link href="../static/css/sticky-footer-navbar.css" rel="stylesheet">
+    <!--<style>
+    html {
+        background-image: url('../static/img/iris_background.jpeg');
+         }
+    </style>-->
+  </head>
+
+  <body>
+
+    <header>
+      <!-- Fixed navbar -->
+      <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+        <a class="navbar-brand" href="{{ url_for('home')}}"><img src="../static/img/logo/Logo.jpg" alt="Logo" width="30" height="30"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="{{ url_for('home')}}">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{{ url_for('aboutus_page')}}">About Me</a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="{{ url_for('iris_page')}}">Iris Predictor <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{{ url_for('language_page')}}">Language Detector</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{{ url_for('sentiment_page')}}">Sentiment Analyzer</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{{ url_for('rubiks_page')}}">Rubik's collection</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{{ url_for('stamps_page')}}">Stamp's collection</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{{ url_for('loan_page')}}">Loan Calculator</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+
+    <!-- Begin page content -->
+    <main role="main" class="container h-100">
+
+    <h1 class="text-center pt-3">Predict the species of Iris flower</h1>
+     <h3 class="text-center pt-3"> Enter the following values to predict the species of Iris flower</h3>
+    <div class="row h-100 justify-content-center align-items-center">
+
+
+    <form action="{{ url_for('predict_iris')}}"method="post">
+        <div class="row">
+            <div class = "col-sm-6 text-center">
+               <label for = "sepallength1"><i>Sepal Length</i></label>
+               <input type = "text" class = "form-control" id = "sepallength" name="sepallength" placeholder = "Enter Sepal Length (cms)">
+            </div>
+            <div class = "col-sm-6 text-center">
+               <label for = "sepalwidth1"><i>Sepal Width</i></label>
+               <input type = "text" class = "form-control" id = "sepalwidth" name="sepalwidth" placeholder = "Enter Sepal Width (cms)">
+            </div>
+        </div>
+        <br>
+        <div class="row">
+          <div class = "col-sm-6 text-center">
+               <label for = "petallength1"><i>Petal Length</i></label>
+               <input type = "text" class = "form-control" id = "petallength" name="petallength"placeholder = "Enter Petal Length (cms)">
+            </div>
+            <div class = "col-sm-6 text-center">
+               <label for = "petalwidth1"><i>Petal Width</i></label>
+               <input type = "text" class = "form-control" id = "petalwidth" name="petalwidth"placeholder = "Enter Petal Width (cms)">
+            </div>
+        </div>
+        <br>
+                <div class="row justify-content-center">
+            <button type = "submit" class = "btn btn-primary">Predict</button>
+            </div>
+         </form>
+         </div>
+   <br>
+   <br>
+   <div class="text-center">
+   <h2>{{ prediction_text }}</h2>
+      </div>
+    </main>
+    <div class="fixed-bottom">
+    <footer class="footer">
+      <div class="container">
+        <div class="text-center">
+          <a href="https://www.facebook.com/rohit.tamboli"><img src="../static/img/footer/fb.jpg" alt="Faceboof"></a>
+          <a href="https://www.instagram.com/rohit1253"><img src="../static/img/footer/insta.jpg" alt="Instagram"></a>
+          <a href="https://www.twitter.com/RohitATamboli"><img src="../static/img/footer/twitter.jpg" alt="Twitter"></a>
+          <a href="https://github.com/rohit1253"><img src="../static/img/footer/github.jpg" alt="GitHub"></a>
+          <a href="https://stackoverflow.com/users/5115109/ratamboli"><img src="../static/img/footer/stack.jpg" alt="StackOverFlow"></a>
+          <a href="https://www.linkedin.com/in/rohit-tamboli-94a97337"><img src="../static/img/footer/linkedin.jpg" alt="LinkedIN"></a>
+        <!--<span class="text-muted">Place sticky footer content here.</span>-->
+      </div>
+      </div>
+    </footer>
+    </div>
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script>window.jQuery || document.write('<script src="../static/js/jquery-slim.min.js"><\/script>')</script>
+    <script src="../static/js/popper.min.js"></script>
+    <script src="../static/js/bootstrap.min.js"></script>
+  </body>
+</html>
